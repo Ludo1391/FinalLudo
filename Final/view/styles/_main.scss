@@ -1,0 +1,145 @@
+#cover {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -5;
+  video {
+    // Keep video covering full screen
+    min-height: 100%;
+    min-width: 100%;
+  }
+}
+
+#quotes-display {
+  #filter-grp {
+    position: sticky;
+    top: 0;
+  }
+  .select-container {
+    display: grid;
+    justify-items: center;
+    margin: 0 auto 2em;
+    max-width: 400px;
+    .select-wrapper {
+      width: 85%;
+      margin: auto;
+    }
+    .btn-clear {
+      width: 100%;
+      padding: 0;
+    }
+    .toggle-btn {
+      margin-top: 0.5em;
+    }
+    .textarea {
+      width: 100%;
+
+      overflow-x: hidden;
+    }
+    .cancel-btn {
+      background-color: #d7f93b;
+      color: $color-dark;
+    }
+  }
+
+  #quote-container {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    .quote-container {
+      .card {
+        padding: 0.5em 1em;
+        margin: 1em auto 2em;
+        break-inside: avoid;
+        display: inline-block;
+        width: 90%;
+        background-color: rgba($color: #000000, $alpha: .4);
+        border-radius: .3em;
+        blockquote {
+          font-size: 1.7em;
+          margin: 0em;
+          padding: 0.5em;
+          font-family: $font-cursive;
+        }
+        p {
+          display: block;
+          text-align: right;
+          font-size: 0.9em;
+          font-style: italic;
+        }
+      }
+    }
+    .bottom-row {
+      display: flex;
+      justify-content: space-between;
+      .btn-group {
+        display: flex;
+        margin: auto;
+        .btn {
+          font-size: 0.8em;
+          padding: 0.5em;
+        }
+        .approve-btn {
+          margin-right: 1em;
+        }
+      }
+    }
+    .delete-btn {
+      background-color: $color-warning;
+    }
+  }
+
+  #submit-grp {
+    display: none;
+  }
+
+  #no-match {
+    text-align: center;
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 0.5em;
+}
+
+#login {
+  h1 {
+    text-align: center;
+  }
+  .grid-form {
+    width: 100%;
+    .login-card {
+      width: 300px;
+      margin: auto;
+      .grid-form-group {
+        input {
+          margin: auto;
+          display: block;
+        }
+        width: 100%;
+      }
+    }
+    .submit-button {
+      button {
+        margin: auto;
+        display: block;
+        border: none;
+        height: unset;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  #quotes-display {
+    #quote-container {
+      max-width: 1200px;
+      columns: 2;
+    }
+  }
+}
